@@ -1,0 +1,9 @@
+{
+    "welcome": "Welcome",
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "settings": "Settings",
+      "logout": "Logout"
+    }
+  }
+  
