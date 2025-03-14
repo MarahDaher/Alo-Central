@@ -3,7 +3,10 @@
     "sidebar": {
       "dashboard": "Dashboard",
       "settings": "Settings",
+      "users": "Users",
       "logout": "Logout"
-    }
+    },
+    "search": "Search",
+    "logout":"Logout"
   }
   

@@ -6,13 +6,13 @@ interface UserLayoutProps {}
 
 const UserLayout: FunctionComponent<UserLayoutProps> = () => {
   return (
-    <div className="flex h-screen">
-      <div className="flex flex-col flex-1">
+    <div className="h-screen w-full">
+      <div>
         {/* Header */}
         <UHeader />
 
         {/* Main content */}
-        <main className="flex-1 p-6">
+        <main className="p-6 w-full">
           <Outlet />
         </main>
       </div>

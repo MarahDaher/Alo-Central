@@ -1,26 +1,29 @@
-import { FunctionComponent } from "react";
-import { Outlet } from "react-router";
 import AHeader from "./AdminHeader";
 import ASidebar from "./AdminSidebar";
+import { FunctionComponent } from "react";
+import { Outlet } from "react-router";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
-interface AdminLayoutProps {}
+type AdminLayoutProps = object;
 
 const AdminLayout: FunctionComponent<AdminLayoutProps> = () => {
   return (
-    <div className="flex h-screen">
-      {/* Sidebar */}
-      <ASidebar />
+    <SidebarProvider>
+      <div className="flex h-screen w-full">
+        {/* Sidebar */}
+        <ASidebar />
 
-      <div className="flex flex-col flex-1">
-        {/* Header */}
-        <AHeader />
+        <div className="flex flex-col flex-1">
+          {/* Header */}
+          <AHeader />
 
-        {/* Main content */}
-        <main className="flex-1 p-6">
-          <Outlet />
-        </main>
+          {/* Main content */}
+          <main className="flex-1 p-6">
+            <Outlet />
+          </main>
+        </div>
       </div>
-    </div>
+    </SidebarProvider>
   );
 };
 
